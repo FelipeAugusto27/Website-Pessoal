@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<!--Parte do Felipe A -->
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image" href="logo.png">
+    <title>Produtos</title>
+</head>
+
+<body>
+    <header>
+        <div id="logo">
+            <a href="index.html"><img src="logo.png"></a>
+        </div>
+        <nav>
+            <a href="PáginaDetalhes.html">Detalhes</a>
+            <a href="Novidades.html">Novidades</a>
+            <a href="PáginaContato.html">Contato</a>
+            <a href="produtos.html">Produtos</a>
+        </nav>
+    </header>
+
+    <article id="h2">
+        <h2>Nossos Produtos</h2> <input type="text" id="barrabusca" placeholder="Pesquise nossos produtos">
+    </article>
+
+    <h3>Switches</h3>
+    <article class="artigoproduto">
+        <b class="tituloproduto">SN24300</b>
+        <div class="produtofoto">
+            <img src="SN24300.png">
+        </div>
+        <p>
+            O Switch SN24300 foi desenvolvido para subir as necessidades dos extenços cubículos de escritórios com suas
+            24 portas de acesso de dados. Oferecendo 24 portas Gigabit e desempenho otimizado para ambientes
+            empresariais que exigem alta disponibilidade. Com gerenciamento avançado e baixo consumo energético, é ideal
+            para infraestruturas de médio porte que precisam de estabilidade e expansão segura. Projetado para suportar
+            tráfego intenso com eficiência e confiabilidade.
+        </p>
+    </article>
+
+    <article class="artigoproduto">
+        <b class="tituloproduto">SN48500</b>
+        <div class="produtofoto">
+            <img src="SN48500.png">
+        </div>
+        <p>
+            O SN48500 é um switch de 48 portas Gigabit desenvolvido para infraestruturas empresariais complexas que
+            exigem máxima eficiência e estabilidade. Com arquitetura aprimorada e capacidade de processamento superior,
+            ele garante baixa latência, gerenciamento inteligente de tráfego e segurança avançada.
+            Ideal para data centers e ambientes corporativos que precisam de escalabilidade e confiabilidade contínua, o
+            SN48500 é a escolha certa para quem busca potência e controle total sobre sua rede.
+        </p>
+    </article>
+
+    <h3>Roteadores</h3>
+    <article class="artigoproduto">
+        <b class="tituloproduto">Roteador RN5200</b>
+        <div class="produtofoto">
+            <img src="RN5200.png">
+        </div>
+        <p>
+            Potência, segurança e controle para redes empresariais de alta performance.
+            O RN5200 é o coração da infraestrutura de rede Nexalink, projetado para empresas que exigem conectividade
+            estável, segura e escalável. Com tecnologia de ponta e arquitetura otimizada para grandes volumes de
+            tráfego, ele oferece processamento inteligente de pacotes, balanceamento automático de carga e priorização
+            de dados críticos, garantindo desempenho superior mesmo sob alta demanda. Equipado com quatro antenas de
+            alto ganho e suporte a Wi-Fi corporativo de múltiplas bandas, o RN5200 assegura cobertura ampla e confiável
+            em ambientes complexos. Seu sistema de gerenciamento remoto permite monitoramento em tempo real,
+            configuração simplificada e integração total com hardware de redes Nexalink.
+            Além disso, o roteador conta com firewall avançado, proteção contra intrusões e criptografia de nível
+            empresarial, tornando-se uma solução completa para quem busca eficiência, segurança e controle total sobre a
+            rede corporativa.
+            Ideal para escritórios, data centers e ambientes que não podem se dar ao luxo de perder conexão.
+        </p>
+    </article>
+
+    <article class="artigoproduto">
+        <b class="tituloproduto">RH2400</b>
+        <div class="produtofoto">
+            <img src="RH2400.png">
+        </div>
+        <p>
+            O RH2400 foi desenvolvido para oferecer velocidade e estabilidade em redes domésticas, suportando múltiplos
+            dispositivos conectados simultaneamente. Com 24 canais otimizados e tecnologia de Wi-Fi de última geração,
+            garante streaming fluido, jogos online sem interrupções e navegação segura.
+            Compacto e fácil de configurar, o RH2400 é o roteador ideal para famílias que precisam de internet rápida e
+            protegida em todos os ambientes da casa.
+        </p>
+    </article>
+
+    <h3>Wireless Access Points</h3>
+    <article class="artigoproduto">
+        <b>AN2430</b>
+        <p>O AN2430 é o ponto de acesso ideal para empresas que precisam de conectividade estável e segura em ambientes
+            de médio porte. Com suporte para até 24 usuários simultâneos, oferece Wi-Fi de alta velocidade,
+            gerenciamento centralizado e recursos avançados de segurança. Projetado para integração perfeita com
+            hardware de rede Nexalink, garante uma infraestrutura de rede eficiente e escalável</p>
+
+    </article>
+    <!--
+    <h3>Nossos Serviços</h3>
+    <article>
+        <h3>Planejamento de Infraestrutora de Redes</h3>
+    </article>
+-->
+    <footer>
+        Desenvolvido por <br> Felipe Augusto M. S. Miguel | Gabriel Campos Ribeiro
+    </footer>
+</body>
+<script>
+    // Product Search Filter
+    document.addEventListener('DOMContentLoaded', function () {
+        const searchInput = document.getElementById('barrabusca');
+        const productArticles = document.querySelectorAll('.artigoproduto');
+
+        searchInput.addEventListener('input', function () {
+            const query = searchInput.value.toLowerCase().trim();
+
+            productArticles.forEach(article => {
+                const text = article.textContent.toLowerCase();
+
+                if (query === '' || text.includes(query)) {
+                    article.style.display = 'block';
+                } else {
+                    article.style.display = 'none';
+                }
+            });
+        });
+    });
+</script>
+
+</html>
